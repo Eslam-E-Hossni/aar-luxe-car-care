@@ -112,9 +112,9 @@ const ContactSection = () => {
                           {openCountriesWindow && (
                             <div
                               dir="ltr"
-                              className="absolute min-w-[380px] max-h-[300px] overflow-y-scroll py-4 top-[calc(100%+25px)] -right-3 z-10 shadow-md bg-white"
+                              className="absolute min-w-[300px] md:min-w-[380px] max-h-[300px] overflow-y-scroll py-4 top-[calc(100%+25px)] -right-3 z-10 shadow-md bg-white"
                             >
-                              <div>
+                              <div className="w-full">
                                 <div className="search px-7">
                                   <input
                                     dir="rtl"
@@ -143,7 +143,7 @@ const ContactSection = () => {
                                           alt={country.code}
                                         />
                                         <div className="flex gap-x-3 items-center">
-                                          <p className="name uppercase !font-heading-en font-medium !text-header-bg">
+                                          <p className="name uppercase !text-[14px] md:!text-base !font-heading-en font-medium !text-header-bg">
                                             {country.name}
                                           </p>
                                           <p className="dial-code text-sm text-[#4B5563] -mt-0.5">

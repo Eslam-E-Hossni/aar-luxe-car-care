@@ -51,17 +51,17 @@ const PartnersSection = () => {
                 />
               </div>
             </div>
-            <div className="w-full lg:w-2/3 flex flex-col justify-between mt-2">
+            <div className="w-full lg:w-2/3 flex flex-col justify-between mt-2 py-8 lg:py-0">
               {carsLogo.map((row, idx) => {
                 return (
                   <div
-                    className="logos flex mb-6 last:mb-0 bg-yellow-200"
+                    className="logos flex mb-6 last:mb-0"
                     key={idx}
                   >
                     {row.map((logo) => {
                       return (
                         <div
-                          className="logo w-full lg:w-1/4 h-[70px] relative"
+                          className="logo w-full lg:w-1/4 h-[50px] md:h-[60px] lg:h-[70] relative"
                           key={logo.src}
                         >
                           <Image
