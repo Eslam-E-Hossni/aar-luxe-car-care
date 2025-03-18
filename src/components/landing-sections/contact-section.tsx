@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import BaseButton from "../ui/base-button";
 import Image from "next/image";
 import CountryCodes from "./constants/CountryCodes.json";
 import { useTranslations } from "next-intl";
+import { useClickOutside } from "@/lib/hooks/useClickOutside";
 
 const ContactSection = () => {
   const t = useTranslations("components.ContactUsSection");
@@ -46,6 +47,9 @@ const ContactSection = () => {
     setMobileNumberState(value);
   };
 
+  const wrapperRef = useRef(null);
+  useClickOutside(wrapperRef, setOpenCountriesWindow);
+
   return (
     <section id="contact-form" className="">
       <div className="inner pb-12">
@@ -55,10 +59,10 @@ const ContactSection = () => {
               <div className="py-12">
                 <div className="flex justify-center">
                   <div className="h-full text-center">
-                    <h2 className="font-heading-arabic  !text-5xl font-semibold text-white mb-5">
+                    <h2 className="font-heading-arabic !text-5xl font-semibold text-white mb-5">
                       {t("title")}
                     </h2>
-                    <p className="font-heading-arabic text-lg w-[700px] text-white leading-[32px]">
+                    <p className="font-heading-arabic text-lg lg:w-[700px] text-white leading-[32px]">
                       {t("description")}
                     </p>
                   </div>
@@ -71,9 +75,8 @@ const ContactSection = () => {
               <div className="flex">
                 <div className="w-full bg-white mt-[-50px] rounded-2xl py-12 shadow-md">
                   <form className="w-full">
-                    <div className="form-group flex items-center justify-center gap-x-10">
-                      <div className="form-controll w-1/3">
-                        {/* <UserRound /> */}
+                    <div className="form-group flex flex-wrap items-center justify-center gap-x-10">
+                      <div className="form-controll w-4/5 lg:w-1/3 mb-6 lg:mb-0">
                         <input
                           type="text"
                           className="border border-[#b9b9b9] h-[55px] w-full px-5 outline-none"
@@ -84,9 +87,9 @@ const ContactSection = () => {
                       </div>
                       <div
                         dir="rtl"
-                        className="form-controll w-1/3 border border-[#b9b9b9] h-[55px] pr-3 flex items-center"
+                        className="form-controll w-4/5 lg:w-1/3 border border-[#b9b9b9] h-[55px] pr-3 flex items-center"
                       >
-                        <div className="relative">
+                        <div className="relative" ref={wrapperRef}>
                           <button
                             type="button"
                             className="cursor-pointer flex items-center block"
@@ -109,7 +112,7 @@ const ContactSection = () => {
                           {openCountriesWindow && (
                             <div
                               dir="ltr"
-                              className="absolute min-w-[350px] max-h-[300px] overflow-y-scroll py-4 top-[calc(100%+25px)] -right-3 z-10 shadow-md bg-white"
+                              className="absolute min-w-[380px] max-h-[300px] overflow-y-scroll py-4 top-[calc(100%+25px)] -right-3 z-10 shadow-md bg-white"
                             >
                               <div>
                                 <div className="search px-7">
@@ -166,7 +169,7 @@ const ContactSection = () => {
                       </div>
                     </div>
                     <div className="form-group flex justify-center mt-6">
-                      <div className="form-controll w-[calc(66.666%+40px)]">
+                      <div className="form-controll w-4/5 lg:w-[calc(66.666%+40px)]">
                         {/* <Mail /> */}
                         <textarea
                           name=""
@@ -177,7 +180,7 @@ const ContactSection = () => {
                       </div>
                     </div>
                     <div className="form-group flex justify-center mt-6 overflow-hidden">
-                      <div className="w-[calc(66.666%+40px)]">
+                      <div className="w-4/5 lg:w-[calc(66.666%+40px)]">
                         <BaseButton
                           type="button"
                           theme="primary"

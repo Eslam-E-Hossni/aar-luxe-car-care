@@ -35,10 +35,10 @@ const PartnersSection = () => {
           alt="shape"
         />
       </div>
-      <div className="container ">
+      <div className="container">
         <div className="">
           <div className="flex relative items-center justify-center">
-            <div className="w-1/4">
+            <div className="hidden lg:block lg:w-1/4">
               <div className="w-full h-[620px] relative">
                 <Image
                   src={"/assets/images/cars/silver-car.png"}
@@ -51,17 +51,17 @@ const PartnersSection = () => {
                 />
               </div>
             </div>
-            <div className="w-2/3 flex flex-col justify-center mt-2">
+            <div className="w-full lg:w-2/3 flex flex-col justify-between mt-2">
               {carsLogo.map((row, idx) => {
                 return (
                   <div
-                    className="logos flex flex-wrap mb-6 last:mb-0"
+                    className="logos flex mb-6 last:mb-0 bg-yellow-200"
                     key={idx}
                   >
                     {row.map((logo) => {
                       return (
                         <div
-                          className="logo w-1/4 h-[70px] relative"
+                          className="logo w-full lg:w-1/4 h-[70px] relative"
                           key={logo.src}
                         >
                           <Image

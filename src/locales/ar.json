@@ -6,10 +6,10 @@
   "layout": {
     "Header": {
       "links": {
-        "home": "ألرئيسية",
+        "home": "الرئيسية",
         "whoUs": "من نحن",
-        "services": "خدماتنا ألمتميزة",
-        "projects": "أعمالنا",
+        "services": "خدماتنا المتميزة",
+        "projects": "اعمالنا",
         "bookOnline": "إحجز أونلاين",
         "branches": "فروعنا",
         "contact": "تواصل معنا"

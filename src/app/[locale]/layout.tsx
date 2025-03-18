@@ -7,7 +7,6 @@ import { IBM_Plex_Sans_Arabic, Chakra_Petch } from "next/font/google";
 import "@/styles/globals.css";
 import LandingHeader from "@/components/layout/landing-header";
 import LandingFooter from "@/components/layout/landing-footer";
-// import LandingFooter from "@/components/layout/landing-footer";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-plex-arabic",
@@ -42,6 +41,7 @@ export default async function LocaleLayout({
 
   return (
     <html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <body
         className={`${ibmPlexSansArabic.variable} ${chakraPetch.variable} antialiased overflow-x-hidden`}
         cz-shortcut-listen="true"

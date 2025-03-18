@@ -12,7 +12,6 @@ const HeroSection = () => {
     <section
       className="bg-[image:var(--hero-bg)]  bg-no-repeat h-screen w-full bg-cover bg-fixed min-h-screen relative overflow-x-hidden"
       id="hero-section"
-      style={{ borderBottomRightRadius: "150px" }}
     >
       <div className="smoke-effect absolute top-0 left-0 w-full h-full z-0">
         <SmokeScene />
@@ -26,13 +25,13 @@ const HeroSection = () => {
                 className={cls(
                   "!mb-4 text-white",
                   locale === "ar"
-                    ? "font-heading-arabic !text-6xl font-bold leading-24"
+                    ? "font-heading-arabic !text-5xl lg:!text-6xl font-bold leading-20 lg:leading-24"
                     : "font-heading-en text-6xl font-semibold max-w-[90%] leading-[1.10606em]"
                 )}
               >
                 {t("title")}
               </h1>
-              <p className="text-xl text-white leading-[35px] font-medium mb-8">
+              <p className="text-lg lg:text-xl text-white leading-[35px] font-medium mb-8">
                 {t("description.line1")}
                 <br />
                 {t("description.line2")}

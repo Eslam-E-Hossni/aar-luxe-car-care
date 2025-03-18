@@ -64,13 +64,13 @@ const LandingFooter = () => {
                   <p className="font-bold font-heading-arabic text-lg font-bold mb-8">
                     {t("newsteller.title")}
                   </p>
-                  <form className="flex flex-col sm:flex-row">
+                  <form className="flex flex-col lg:flex-row">
                     <input
                       className="border border-[#b9b9b9] h-[51.5px] w-full px-5 outline-none bg-[#F8F8F8] text-black placeholder:text-[#9D9D9D]"
                       type="email"
                       placeholder={t("newsteller.form.input")}
                     />
-                    <div className="w-[60%] mr-5 overflow-hidden">
+                    <div className="w-full lg:w-[60%] lg:mr-5 overflow-hidden mt-4 lg:mt-0">
                       <BaseButton
                         type="button"
                         className=""
@@ -82,7 +82,7 @@ const LandingFooter = () => {
                     </div>
                   </form>
                 </div>
-                <div className="flex items-center gap-x-4 mt-10">
+                <div className="flex items-center justify-center lg:justify-start gap-x-4 mt-10">
                   {paymentMethods.map((paymentMethod) => {
                     return (
                       <Image
@@ -107,7 +107,7 @@ const LandingFooter = () => {
               </div>
             </div>
             <div className="flex flex-col mx-auto justify-center sm:flex-row text-center text-gray-500">
-              <div className="py-4 flex items-center gap-x-3">
+              <div className="py-4 flex items-center justify-center gap-x-3">
                 <p>{t("madeBy")}</p>
                 <Image
                   src={"/assets/images/10trend-logo.png"}

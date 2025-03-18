@@ -16,7 +16,7 @@ const WhyUsSection = () => {
             {t("title")}
           </h2>
 
-          <div className="flex flex-wrap justify-center items-center gap-y-20 gap-x-[200px] relative z-10">
+          <div className="flex flex-wrap lg:justify-center items-center gap-y-20 gap-x-[100px] xl:gap-x-[200px] relative z-10">
             {list.map(
               (
                 item: { title: string; description: string; icon: string },

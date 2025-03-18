@@ -50,16 +50,19 @@ const ServicesSection = () => {
             return (
               <div
                 key={idx}
-                className="flex even:justify-center odd:justify-between relative z-10 even:gap-x-32 py-6"
+                className="flex flex-wrap even:justify-center odd:justify-between relative z-10 md:even:gap-x-12 lg:even:gap-x-32 py-6"
               >
                 {row.map((card: any) => {
                   return (
-                    <div key={card["img"]} className="w-[375px] relative group">
+                    <div
+                      key={card["img"]}
+                      className="w-full md:w-[340px] lg:w-[375px] relative group mb-16 md:mb-0"
+                    >
                       <div className="mb-[9.787%] overflow-hidden rounded-xl relative after:absolute after:inset-0 after:bg-black after:transition-all after:opacity-0 group-hover:after:opacity-40">
                         <Image
                           src={`/assets/images/services/${card.img}`}
-                          width={375}
-                          height={375}
+                          width={600}
+                          height={400}
                           className="group-hover:scale-110 group-hover:-rotate-3 transition-all"
                           alt={card.title}
                         />
@@ -98,15 +101,15 @@ const ServicesSection = () => {
           })}
 
           {/* shape */}
-          <div className="absolute left-1/2 top-[calc(50%+60px)] -translate-1/2 w-[400px] h-[400px] bg-[image:var(--services-shape)] bg-cover">
+          <div className="hidden lg:block absolute left-1/2 top-[calc(50%+60px)] -translate-1/2 w-[400px] h-[400px] bg-[image:var(--services-shape)] bg-cover">
             <div className="rounded-full absolute left-[50.6%] top-[51.6%] -translate-1/2 w-[115px] h-[115px] bg-[image:var(--services-shape-inside)] bg-cover motion-safe:animate-[spin_5s_linear_infinite] duration-initial"></div>
           </div>
-          <div className="absolute right-[-505px] bottom-[-300px] -translate-1/2 w-[637px] h-[600px] bg-[image:var(--services-road-shap)] bg-cover -z-10 opacity-40"></div>
-          <div className="absolute left-[315px] top-[73px] -translate-1/2 w-[800px] rotate-[290deg] h-[600px] bg-[image:var(--services-road-shap-2)] bg-cover -z-10 opacity-40"></div>
+          <div className="md:hidden lg:block absolute right-[-505px] bottom-[-300px] -translate-1/2 w-[637px] h-[600px] bg-[image:var(--services-road-shap)] bg-cover -z-10 opacity-40"></div>
+          <div className="md:hidden lg:block absolute left-[315px] top-[73px] -translate-1/2 w-[800px] rotate-[290deg] h-[600px] bg-[image:var(--services-road-shap-2)] bg-cover -z-10 opacity-40"></div>
 
           <div
             className={cls(
-              "absolute w-[200px] h-[350px] rotate-[150deg] bg-[image:var(--services-car-pic)] bg-cover",
+              "hidden lg:block absolute w-[200px] h-[350px] rotate-[150deg] bg-[image:var(--services-car-pic)] bg-cover",
               runFirstCar
                 ? "animate-car1-moving top-[-93px] left-[70px]"
                 : "top-[-400] left-0"
@@ -115,7 +118,7 @@ const ServicesSection = () => {
           <div
             ref={car2AnimationRef}
             className={cls(
-              "absolute w-[200px] h-[350px] rotate-[280deg] bg-[image:var(--services-car-pic)] bg-cover",
+              "hidden lg:block absolute w-[200px] h-[350px] rotate-[280deg] bg-[image:var(--services-car-pic)] bg-cover",
               runSecondCar
                 ? "animate-car2-moving bottom-[-100px] right-0"
                 : "top-[-185] right-[-200px]"

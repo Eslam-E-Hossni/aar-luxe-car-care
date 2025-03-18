@@ -6,156 +6,156 @@
   "layout": {
     "Header": {
       "links": {
-        "home": "ألرئيسية",
-        "whoUs": "من نحن",
-        "services": "خدماتنا ألمتميزة",
-        "projects": "أعمالنا",
-        "bookOnline": "إحجز أونلاين",
-        "branches": "فروعنا",
-        "contact": "تواصل معنا"
+        "home": "Home",
+        "whoUs": "Who We Are",
+        "services": "Our Premium Services",
+        "projects": "Our Work",
+        "bookOnline": "Book Online",
+        "branches": "Our Branches",
+        "contact": "Contact Us"
       }
     },
     "Footer": {
       "links": [
         {
-          "title": "خدماتنــــا",
+          "title": "Our Services",
           "links": [
             {
-              "text": "جلاد حماية شفاف (PPF)",
+              "text": "Transparent Paint Protection Film (PPF)",
               "link": "/"
             },
             {
-              "text": "جلاد حماية ملون",
+              "text": "Colored Paint Protection Film",
               "link": "/"
             },
             {
-              "text": "تظليل عازل حراري",
+              "text": "Thermal Insulation Tinting",
               "link": "/"
             },
             {
-              "text": "تلميع وحماية السيراميك",
+              "text": "Ceramic Polish and Protection",
               "link": "/"
             },
             {
-              "text": "تغيير لون السيارة بالفينيل",
+              "text": "Car Color Change with Vinyl",
               "link": "/"
             },
             {
-              "text": "صبغ تجميلي كامل",
+              "text": "Full Cosmetic Painting",
               "link": "/"
             },
             {
-              "text": "حماية مقدمة السيارة",
+              "text": "Car Front Protection",
               "link": "/"
             },
             {
-              "text": "تنجيد داخلي فاخر",
+              "text": "Luxury Interior Upholstery",
               "link": "/"
             },
             {
-              "text": "إصلاح وتجديد المصابيح",
+              "text": "Headlight Repair and Restoration",
               "link": "/"
             },
             {
-              "text": "تنظيف المحرك بالبخار",
+              "text": "Engine Steam Cleaning",
               "link": "/"
             }
           ]
         },
         {
-          "title": "خدمة العملاء",
+          "title": "Customer Service",
           "links": [
             {
-              "text": "الأسئلة المتكررة",
+              "text": "Frequently Asked Questions",
               "link": "/"
             },
             {
-              "text": "وسائل الدفع",
+              "text": "Payment Methods",
               "link": "/"
             },
             {
-              "text": "السياسات و البنود",
+              "text": "Policies and Terms",
               "link": "/"
             },
             {
-              "text": "سياسة الخصوصية",
+              "text": "Privacy Policy",
               "link": "/"
             },
             {
-              "text": "سياسة الضمان",
+              "text": "Warranty Policy",
               "link": "/"
             }
           ]
         }
       ],
       "newsteller": {
-        "title": "احصل على آخر أخبار السيارات",
+        "title": "Get the Latest Car News",
         "form": {
-          "input": "ادخل البريد الالكتروني",
-          "button": "اشترك"
+          "input": "Enter your email",
+          "button": "Subscribe"
         }
       },
-      "copyright": "جميع الحقوق محفوظة © 2025",
-      "madeBy": "صنع بكل حب ❤️ بواسطة"
+      "copyright": "All rights reserved © 2025",
+      "madeBy": "Made with love ❤️ by"
     }
   },
   "components": {
     "HeroSection": {
-      "title": "احمي سيارتك بأعلى معايير الجودة",
+      "title": "Protect Your Car with the Highest Quality Standards",
       "description": {
-        "line1": "نقدم لك تجربة فريدة في عالم العناية بالسيارات",
-        "line2": "حيث الجودة والاحترافية تلتقيان لتوفير أفضل الخدمات لسيارتك",
-        "line3": "بأفضل الخامات وبضمان حتى 7 سنوات"
+        "line1": "We offer you a unique experience in the world of car care",
+        "line2": "Where quality and professionalism meet to provide the best services for your car",
+        "line3": "With the best materials and a warranty of up to 7 years"
       },
-      "button": "أحجز موعدك الان"
+      "button": "Book Your Appointment Now"
     },
     "AboutUsSection": {
-      "title": "من نحن",
-      "description": "هي علامة تجارية رائدة في مجال العناية الفاخرة بالسيارات، تأسست لتقديم حلول مبتكرة تحافظ على جمال وحماية سيارتك. بعد نجاحنا الكبير في الإمارات، جئناكم إلى السعودية لنقدم نفس المستوى من الجودة والخدمات الاحترافية التي تستحقها. "
+      "title": "Who We Are",
+      "description": "We are a leading brand in the field of luxury car care, established to provide innovative solutions that maintain the beauty and protection of your car. After our great success in the UAE, we have come to Saudi Arabia to offer the same level of quality and professional services that you deserve."
     },
     "WhyUsSection": {
-      "title": "لماذا AAR LUXE؟",
+      "title": "Why AAR LUXE?",
       "list": [
         {
-          "title": "منتجات عالية الجودة",
-          "description": "جميع المواد المستخدمة لدينا مستوردة من أفضل الشركات العالمية",
+          "title": "High-Quality Products",
+          "description": "All materials used are imported from the best global companies",
           "icon": "img-1.png"
         },
         {
-          "title": "ضمان راحة البال",
-          "description": "ضمان يصل إلى 7 سنوات نضمن لك الحماية والجودة لفترة طويلة",
+          "title": "Peace of Mind Warranty",
+          "description": "A warranty of up to 7 years ensures long-term protection and quality",
           "icon": "img-3.png"
         },
         {
-          "title": "فريق محترف",
-          "description": "لدينا خبراء وفنيون مدربون بعناية لتنفيذ أدق التفاصيل",
+          "title": "Professional Team",
+          "description": "We have carefully trained experts and technicians to execute the finest details",
           "icon": "img-2.png"
         },
         {
-          "title": "عروض حصرية",
-          "description": "قدم أقوى العروض التنافسية على جميع خدماتنا",
+          "title": "Exclusive Offers",
+          "description": "We offer the most competitive deals on all our services",
           "icon": "img-4.png"
         }
       ]
     },
     "ServicesSection": {
-      "title": "خدماتنا",
+      "title": "Our Services",
       "cards": [
         [
           {
-            "title": "حماية طلاء السيارات (PPF)",
-            "description": "نوفر أفلام الحماية الشفافة والملونة المصنوعة بأحدث التقنيات الأمريكية، لحماية سيارتك من الخدوش والأحجار وأشعة الشمس مع ضمان يصل إلى 7 سنوات.",
+            "title": "Car Paint Protection (PPF)",
+            "description": "We provide transparent and colored protection films made with the latest American technologies to protect your car from scratches, stones, and sunlight, with a warranty of up to 7 years.",
             "knowMore": {
-              "text": "اعرف المزيد ..",
+              "text": "Learn More ..",
               "link": "#"
             },
             "img": "img-1.png"
           },
           {
-            "title": "التظليل العازل الحراري",
-            "description": "تظليل عازل حراري بتقنية متقدمة يحجب الحرارة والأشعة فوق البنفسجية، متوفر بدرجات مختلفة وفقًا لمتطلباتك، مع ضمان راحة البال ٧ سنوات .",
+            "title": "Thermal Insulation Tinting",
+            "description": "Advanced thermal insulation tinting that blocks heat and UV rays, available in different shades according to your requirements, with a 7-year peace of mind warranty.",
             "knowMore": {
-              "text": "اعرف المزيد ..",
+              "text": "Learn More ..",
               "link": "#"
             },
             "img": "img-2.png"
@@ -163,19 +163,19 @@
         ],
         [
           {
-            "title": "التلميع والسيراميك",
-            "description": "حماية فائقة لطلاء السيارة مع طلاء السيراميك المتطور الذي يعزز لمعان السيارة ويحميها من الأوساخ والخدوش، مع صيانة مجانية سنوية.",
+            "title": "Polishing and Ceramic Coating",
+            "description": "Superior protection for your car's paint with advanced ceramic coating that enhances the car's shine and protects it from dirt and scratches, with free annual maintenance.",
             "knowMore": {
-              "text": "اعرف المزيد ..",
+              "text": "Learn More ..",
               "link": "#"
             },
             "img": "img-3.png"
           },
           {
-            "title": "جلاد الحماية الملون",
-            "description": "غير لون سيارتك إلى المظهر الذي تحلم به مع تشكيلة ضخمة من الألوان والأنواع المختلفة من الأغلفة الفاخرة.",
+            "title": "Colored Paint Protection Film",
+            "description": "Change your car's color to the look you dream of with a huge selection of colors and types of luxurious wraps.",
             "knowMore": {
-              "text": "اعرف المزيد ..",
+              "text": "Learn More ..",
               "link": "#"
             },
             "img": "img-4.png"
@@ -183,19 +183,19 @@
         ],
         [
           {
-            "title": "صبغ تجميلي للسيارات",
-            "description": "نوفر خدمة الصبغ التجميلي الاحترافي بتقنيات متطورة للحصول على لون مثالي يدوم طويلاً، مع ضمان 5 سنوات.",
+            "title": "Cosmetic Car Painting",
+            "description": "We provide professional cosmetic painting services with advanced techniques for a perfect, long-lasting color, with a 5-year warranty.",
             "knowMore": {
-              "text": "اعرف المزيد ..",
+              "text": "Learn More ..",
               "link": "#"
             },
             "img": "img-5.png"
           },
           {
-            "title": "العناية الداخلية والتنجيد",
-            "description": "خدمات تنجيد فاخرة للمقاعد بأجود أنواع الجلود والمايكروفايبر، مع إمكانية تخصيص التصميم والألوان حسب رغبتك.",
+            "title": "Interior Care and Upholstery",
+            "description": "Luxury upholstery services for seats with the finest types of leather and microfiber, with the possibility of customizing the design and colors according to your preference.",
             "knowMore": {
-              "text": "اعرف المزيد ..",
+              "text": "Learn More ..",
               "link": "#"
             },
             "img": "img-6.png"
@@ -204,15 +204,15 @@
       ]
     },
     "GallerySection": {
-      "title": "معرض الصور"
+      "title": "Photo Gallery"
     },
     "ContactUsSection": {
-      "title": "تواصل معنا",
-      "description": "نحن هنا لمساعدتك! إذا كان لديك أي استفسارات أو تحتاج إلى دعم، فلا تتردد في التواصل معنا. فريقنا دائماً على استعداد لتقديم أفضل الحلول والرد على جميع أسئلتك.",
+      "title": "Contact Us",
+      "description": "We are here to help you! If you have any inquiries or need support, do not hesitate to contact us. Our team is always ready to provide the best solutions and answer all your questions.",
       "form": {
-        "name": "الاسم",
-        "message": "اكتب رسالتك",
-        "submit": "ارسل"
+        "name": "Name",
+        "message": "Write your message",
+        "submit": "Send"
       }
     }
   }

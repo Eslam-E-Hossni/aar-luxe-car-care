@@ -12,10 +12,10 @@ const Smoke = () => {
     const vertices = [];
 
     // Generate random particle positions
-    for (let i = 0; i < 1000; i++) {
-      const x = Math.random() * 400 - 200;
-      const y = Math.random() * 400 - 200;
-      const z = Math.random() * 400 - 200;
+    for (let i = 0; i < 200; i++) {
+      const x = Math.random() * 100 - 50;
+      const y = Math.random() * 100 - 50;
+      const z = Math.random() * 100 - 50;
       vertices.push(x, y, z);
     }
 
@@ -28,7 +28,7 @@ const Smoke = () => {
     const textureLoader = new THREE.TextureLoader();
     const texture = textureLoader.load("/assets/images/smoke-default.png"); // Add a smoke texture
     const material = new THREE.PointsMaterial({
-      size: 400,
+      size: 200,
       map: texture,
       transparent: true,
       opacity: 0.2,

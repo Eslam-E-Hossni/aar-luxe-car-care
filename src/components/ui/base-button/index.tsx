@@ -35,7 +35,8 @@ const BaseButton = ({
         theme,
         size,
         theme === "primary" && "!bg-primary",
-        size === "header" && "text-[14px] px-[20px] py-[10px] btn-clip",
+        size === "header" &&
+          "text-[14px] px-[20px] py-[10px] lg:px-[15px] xl:px-[20px] xl:py-[10px] btn-clip",
         size === "hero" && "btn-clip",
         size === "contact" && ""
       )}
