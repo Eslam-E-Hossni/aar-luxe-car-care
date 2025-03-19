@@ -59,8 +59,12 @@ export default async function LocaleLayout({
         content="https://aarluxe.online/assets/images/logo.svg"
       />
       <meta property="og:url" content="https://aarluxe.online" />
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta
+        name="twitter:card"
+        content="https://aarluxe.online/assets/images/landing-bg-02.jpg"
+      />
       <meta name="twitter:title" content="احمي سيارتك بأعلى معايير الجودة" />
+      <meta property="og:site_name" content="احمي سيارتك بأعلى معايير الجودة - aarluxe car care"></meta>
       <meta
         name="twitter:description"
         content="احمي سيارتك بأعلى معايير الجودة مع خدماتنا الفاخرة. نقدم تلميع وتغطية سيارات بضمان حتى 7 سنوات."
