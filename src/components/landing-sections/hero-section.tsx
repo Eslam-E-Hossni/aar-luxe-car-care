@@ -38,7 +38,7 @@ const HeroSection = () => {
                 <br />
                 {t("description.line3")}
               </p>
-              <div className="w-[60%]">
+              <div className="w-[80%] md:w-[60%]">
                 <BaseButton type="button" size="hero" theme="primary">
                   {t("button")}
                 </BaseButton>

@@ -61,7 +61,7 @@ const PartnersSection = () => {
                     {row.map((logo) => {
                       return (
                         <div
-                          className="logo w-full lg:w-1/4 h-[50px] md:h-[60px] lg:h-[70] relative"
+                          className="logo w-full lg:w-1/4 h-[40px] md:h-[60px] lg:h-[70] relative"
                           key={logo.src}
                         >
                           <Image
