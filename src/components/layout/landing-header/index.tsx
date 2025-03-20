@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import NavigationLinks from "./navigation-links";
 import BaseButton from "@/components/ui/base-button";
 import cls from "classnames";
+import LangSwitcher from "@/components/ui/lang-switcher";
 
 const LandingHeader = () => {
   const [isHeaderActive, setIsHeaderActive] = useState(false);
@@ -49,7 +50,7 @@ const LandingHeader = () => {
             </div>
 
             <div className="flex items-center lg:order-2">
-              <div className="actions" dir="ltr">
+              <div className="actions ml-6" dir="ltr">
                 <BaseButton
                   type="button"
                   className="hidden lg:block"
@@ -59,12 +60,6 @@ const LandingHeader = () => {
                   +966 55 782 7776
                 </BaseButton>
               </div>
-              {/* <Link
-                href="/"
-                className="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
-              >
-                Log in
-              </Link> */}
               <button
                 data-collapse-toggle="mobile-menu-2"
                 type="button"
@@ -77,6 +72,7 @@ const LandingHeader = () => {
                   <input
                     type="checkbox"
                     onChange={() => setOpenMenu(!openMenu)}
+                    checked={openMenu}
                   />
                   <svg viewBox="0 0 32 32">
                     <path
@@ -87,6 +83,7 @@ const LandingHeader = () => {
                   </svg>
                 </label>
               </button>
+              <LangSwitcher />
             </div>
             <NavigationLinks openMenu={openMenu} setOpenMenu={setOpenMenu} />
           </div>

@@ -7,6 +7,7 @@ import { IBM_Plex_Sans_Arabic, Chakra_Petch } from "next/font/google";
 import "@/styles/globals.css";
 import LandingHeader from "@/components/layout/landing-header";
 import LandingFooter from "@/components/layout/landing-footer";
+import WhatsappIcon from "@/components/ui/whatsapp-icon";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-plex-arabic",
@@ -85,6 +86,7 @@ export default async function LocaleLayout({
           <LandingHeader />
           <main>{children}</main>
           <LandingFooter />
+          <WhatsappIcon />
         </NextIntlClientProvider>
       </body>
     </html>

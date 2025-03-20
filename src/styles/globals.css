@@ -1,5 +1,4 @@
 @import "tailwindcss";
-
 :root {
   --brown: #CDB59D;
   --dark-brown: #4D3A2E;
@@ -64,7 +63,9 @@
       top: -93px;
       left: 70px;
     }
-  };
+  }
+
+  ;
 
   @keyframes car2-moving {
     0% {
@@ -76,16 +77,21 @@
       bottom: -100px;
       right: 0;
     }
-  };
+  }
+
+  ;
 
   @keyframes logos-car-moving {
-    0%{
+    0% {
       transform: translateY(100%);
     }
-    100%{
+
+    100% {
       transform: translateY(0);
     }
-  };
+  }
+
+  ;
 }
 
 @layer utilities {
@@ -93,9 +99,11 @@
     width: 100%;
     padding: 0 15px;
     margin: 0 auto;
+
     @media (width >=40rem) {
       max-width: 40rem;
     }
+
     @media (width >=48rem) {
       max-width: 48rem;
     }
@@ -145,13 +153,13 @@
     transform: rotate(30deg);
     background: rgba(0, 0, 0, .80);
     background: linear-gradient(to right,
-          rgba(240, 240, 240, 0.25) 0%,
-          rgba(0, 0, 0, 0.13) 77%,
-          rgba(0, 0, 0, 0.5) 92%,
-          rgb(240, 240, 240) 100%
-          /* Use a slightly darker off-white color */
-        );
-        }
+        rgba(240, 240, 240, 0.25) 0%,
+        rgba(0, 0, 0, 0.13) 77%,
+        rgba(0, 0, 0, 0.5) 92%,
+        rgb(240, 240, 240) 100%
+        /* Use a slightly darker off-white color */
+      );
+  }
 
   #base-button:hover {
     color: #fff;
@@ -163,10 +171,10 @@
     background-color: transparent !important;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 100% 100%, 0 100%, 0 20px);
   }
-  
+
   #base-button.contact:hover span {
-      color: #000 !important;
-    }
+    color: #000 !important;
+  }
 
   #base-button:hover::after {
     opacity: 1;
@@ -216,8 +224,37 @@
   stroke-dashoffset: -32.42;
 }
 
-.hamburger input:checked ~ .navlinks {
+.hamburger input:checked~.navlinks {
   opacity: 1;
+}
+
+/* Whatsapp icon */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+  animation: pulse_01 1.5s infinite;
+  z-index: 20;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 35px;
+  height: 35px;
 }
 
 @media (prefers-color-scheme: dark) {

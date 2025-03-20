@@ -36,14 +36,16 @@ const NavigationLinks = ({ openMenu, setOpenMenu }: any) => {
           );
         })}
       </ul>
-      <BaseButton
-        type="button"
-        className="lg:hidden"
-        theme="primary"
-        size="header"
-      >
-        +966 55 782 7776
-      </BaseButton>
+      <div dir="ltr">
+        <BaseButton
+          type="button"
+          className="lg:hidden"
+          theme="primary"
+          size="header"
+        >
+          +966 55 782 7776
+        </BaseButton>
+      </div>
     </div>
   );
 };
