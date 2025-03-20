@@ -93,28 +93,6 @@ const LandingHeader = () => {
         </div>
       </nav>
     </header>
-    // <div
-    //   id="header"
-    //   className={cls(
-    //     "fixed left-0 top-0 w-full z-50 text-white transition-all",
-    //     isHeaderActive ? "bg-header-bg" : "bg-transparent"
-    //   )}
-    // >
-    //   <div className="container">
-    //     <div
-    //       className={cls(
-    //         "inner flex items-center justify-between transition-all",
-    //         isHeaderActive ? "py-4" : "py-6"
-    //       )}
-    //     >
-    //       <NavigationLinks />
-    //       <div className="actions" dir="ltr">
-    //         <BaseButton type="button" className="" theme="primary" size="header">+966 55 782 7776</BaseButton>
-    //       </div>
-    //       {/* <div className="hamburger-menu"></div> */}
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 

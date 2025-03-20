@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import BaseButton from "@/components/ui/base-button";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -30,8 +29,8 @@ const paymentMethods = [
   { name: "Visa", icon: "Visa.png" },
 ];
 
-const LandingFooter = () => {
-  const t = useTranslations("layout.Footer");
+const LandingFooter = async () => {
+  const t = await getTranslations("layout.Footer");
   const links = t.raw("links");
   return (
     <footer id="footer" className="bg-header-bg">
@@ -39,25 +38,35 @@ const LandingFooter = () => {
         <div className="footer-inner pt-16 pb-2">
           <div className="w-full text-gray-300">
             <div className="grid justify-center grid-cols-2 md:grid-cols-4 border-b-2 border-gray-600 pb-8">
-              {links.map((section: any, index: number) => (
-                <div key={index}>
-                  <h6 className="font-heading-arabic text-lg font-bold mb-2">
-                    {section.title}
-                  </h6>
-                  <ul className="w-fit">
-                    {section.links.map((link: any, i: number) => (
-                      <li
-                        key={i}
-                        className="text-gray-500 font-heading-arabic hover:text-white"
-                      >
-                        <Link href={link.link} className="block py-1.5">
-                          {link.text}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              {links.map(
+                (
+                  section: {
+                    title: string;
+                    links: { text: string; link: string }[];
+                  },
+                  index: number
+                ) => (
+                  <div key={index}>
+                    <h6 className="font-heading-arabic text-lg font-bold mb-2">
+                      {section.title}
+                    </h6>
+                    <ul className="w-fit">
+                      {section.links.map(
+                        (link: { text: string; link: string }, i: number) => (
+                          <li
+                            key={i}
+                            className="text-gray-500 font-heading-arabic hover:text-white"
+                          >
+                            <Link href={link.link} className="block py-1.5">
+                              {link.text}
+                            </Link>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </div>
+                )
+              )}
 
               <div className="col-span-2 pt-8 md:pt-0">
                 <div>

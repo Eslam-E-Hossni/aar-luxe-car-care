@@ -42,10 +42,6 @@ export default async function LocaleLayout({
   return (
     <html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
       <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-      />
-      <meta
         name="keywords"
         content="عناية بالسيارات, حماية السيارات, خدمات سيارات, تلميع سيارات, تغطية السيارات, ضمان حماية السيارات, أفضل خدمات السيارات, عناية فاخرة بالسيارات, حماية سيارات فاخرة, خدمات سيارات عالية الجودة, تلميع سيارات محترف, تغطية سيارات بضمان, عناية سيارات بأعلى معايير, حماية سيارات لمدة 7 سنوات"
       />
@@ -64,7 +60,10 @@ export default async function LocaleLayout({
         content="https://aarluxe.online/assets/images/landing-bg-02.jpg"
       />
       <meta name="twitter:title" content="احمي سيارتك بأعلى معايير الجودة" />
-      <meta property="og:site_name" content="احمي سيارتك بأعلى معايير الجودة - aarluxe car care"></meta>
+      <meta
+        property="og:site_name"
+        content="احمي سيارتك بأعلى معايير الجودة - aarluxe car care"
+      ></meta>
       <meta
         name="twitter:description"
         content="احمي سيارتك بأعلى معايير الجودة مع خدماتنا الفاخرة. نقدم تلميع وتغطية سيارات بضمان حتى 7 سنوات."

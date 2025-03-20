@@ -13,10 +13,12 @@ export const metadata: Metadata = {
     "نقدم لك تجربة فريدة في عالم العناية بالسيارات حيث الجودة والاحترافية تلتقيان لتوفير أفضل الخدمات لسيارتك بأفضل الخامات وبضمان حتى 7 سنوات",
 };
 
-export default function Home() {
+export default async function Home({ params }: { params: { locale: string } }) {
+  const { locale } = await params;
+
   return (
     <div className="">
-      <HeroSection />
+      <HeroSection locale={locale} />
       <AboutUsSection />
       <WhyUsSection />
       <ServicesSection />

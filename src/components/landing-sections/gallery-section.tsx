@@ -1,11 +1,31 @@
-/* eslint-disable @next/next/no-img-element */
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 
-const GallerySection = () => {
-  const t = useTranslations("components");
+const IMAGES_SRC = [
+  [
+    "/assets/images/gallery/1.jpeg",
+    "/assets/images/gallery/2.jpeg",
+    "/assets/images/gallery/3.webp",
+  ],
+  [
+    "/assets/images/gallery/4.webp",
+    "/assets/images/gallery/5.jpeg",
+    "/assets/images/gallery/6.webp",
+  ],
+  [
+    "/assets/images/gallery/7.webp",
+    "/assets/images/gallery/8.webp",
+    "/assets/images/gallery/9.webp",
+  ],
+  [
+    "/assets/images/gallery/10.webp",
+    "/assets/images/gallery/11.jpeg",
+    "/assets/images/gallery/12.jpeg",
+  ],
+];
+
+const GallerySection = async () => {
+  const t = await getTranslations("components");
   return (
     <section
       className="w-full bg-header-bg relative overflow-x-hidden text-white py-16 before:absolute before:inset-0 before:bg-[image:var(--logo-shape)] before:opacity-10"
@@ -17,122 +37,25 @@ const GallerySection = () => {
             {t("GallerySection.title")}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-20">
-            <div className="grid gap-4">
-              <div className="relative">
-                <Image
-                  src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt=""
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt=""
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt=""
-                />
-              </div>
-            </div>
-            <div className="grid gap-4">
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/1164778/pexels-photo-1164778.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/445399/pexels-photo-445399.jpeg?auto=compress&cs=tinysrgb&w=600"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-            </div>
-            <div className="grid gap-4">
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/3311574/pexels-photo-3311574.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/1519192/pexels-photo-1519192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/1383834/pexels-photo-1383834.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-            </div>
-            <div className="grid gap-4">
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/1213294/pexels-photo-1213294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/1429775/pexels-photo-1429775.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-              <div>
-                <Image
-                  src="https://images.pexels.com/photos/3156482/pexels-photo-3156482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  className="max-w-full rounded-lg h-full object-cover"
-                  width={400}
-                  height={400}
-                  alt={t("AboutUsSection.description")}
-                />
-              </div>
-            </div>
+            {IMAGES_SRC.map((row: string[], idx: number) => {
+              return (
+                <div className="grid gap-4" key={idx}>
+                  {row.map((imgSrc: string) => {
+                    return (
+                      <div className="relative" key={imgSrc}>
+                        <Image
+                          src={imgSrc}
+                          className="max-w-full rounded-lg h-full object-cover"
+                          width={400}
+                          height={400}
+                          alt=""
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

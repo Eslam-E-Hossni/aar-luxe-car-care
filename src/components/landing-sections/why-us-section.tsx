@@ -1,9 +1,9 @@
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import React from "react";
 
-const WhyUsSection = () => {
-  const t = useTranslations("components.WhyUsSection");
+const WhyUsSection = async () => {
+  const t = await getTranslations("components.WhyUsSection");
   const list = t.raw("list");
   return (
     <section

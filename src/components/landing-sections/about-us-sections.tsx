@@ -1,10 +1,9 @@
-"use client";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import React from "react";
 
-const AboutUsSection = () => {
-  const t = useTranslations("components.AboutUsSection");
+const AboutUsSection = async () => {
+  const t = await getTranslations("components.AboutUsSection");
   return (
     <section
       className="w-full bg-[image:var(--lines-shape)] min-h-[calc(100vh-92px)] relative overflow-x-hidden"
@@ -23,7 +22,7 @@ const AboutUsSection = () => {
             </div>
           </div>
           <div className="w-full lg:w-2/3 lg:min-h-[calc(100vh-92px)] flex justify-center items-center -order-1 lg:order-2">
-          {/* lg */}
+            {/* lg */}
             <div className="hidden lg:block relative z-10">
               <Image
                 src={"/assets/images/cars/black-car.png"}

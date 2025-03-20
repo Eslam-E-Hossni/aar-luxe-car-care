@@ -1,13 +1,11 @@
-"use client";
 import React from "react";
 import SmokeScene from "../smoke-effect/smoke-scene";
-import { useLocale, useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import cls from "classnames";
 import BaseButton from "../ui/base-button";
 
-const HeroSection = () => {
-  const t = useTranslations("components.HeroSection");
-  const locale = useLocale();
+const HeroSection = async ({ locale }: { locale: string }) => {
+  const t = await getTranslations("components.HeroSection");
   return (
     <section
       className="bg-[image:var(--hero-bg)]  bg-no-repeat h-screen w-full bg-cover bg-fixed min-h-screen relative overflow-x-hidden"
