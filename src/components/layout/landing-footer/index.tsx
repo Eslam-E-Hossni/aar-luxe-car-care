@@ -1,7 +1,6 @@
 import BaseButton from "@/components/ui/base-button";
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 import {
@@ -57,9 +56,9 @@ const LandingFooter = async () => {
                             key={i}
                             className="text-gray-500 font-heading-arabic hover:text-white"
                           >
-                            <Link href={link.link} className="block py-1.5">
+                            <p className="block py-1.5">
                               {link.text}
-                            </Link>
+                            </p>
                           </li>
                         )
                       )}
@@ -70,7 +69,7 @@ const LandingFooter = async () => {
 
               <div className="col-span-2 pt-8 md:pt-0">
                 <div>
-                  <p className="font-bold font-heading-arabic text-lg font-bold mb-8">
+                  <p className="font-bold font-heading-arabic text-lg mb-8">
                     {t("newsteller.title")}
                   </p>
                   <form className="flex flex-col lg:flex-row">
