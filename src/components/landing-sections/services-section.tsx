@@ -11,10 +11,8 @@ const ServicesSection = () => {
   const list = t.raw("cards");
 
   const car1AnimationRef = useRef<HTMLInputElement>(null);
-  const car2AnimationRef = useRef<HTMLInputElement>(null);
 
   const [runFirstCar, setRunFirstCar] = useState(false);
-  const [runSecondCar, setRunSecondCar] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -24,13 +22,6 @@ const ServicesSection = () => {
           (car1AnimationRef?.current?.offsetTop as number) - 300
         ) {
           setRunFirstCar(true);
-        }
-
-        if (
-          window.scrollY - (car1AnimationRef.current?.offsetTop as number) >=
-          750
-        ) {
-          setRunSecondCar(true);
         }
       });
     }
@@ -101,27 +92,24 @@ const ServicesSection = () => {
           })}
 
           {/* shape */}
-          <div className="hidden lg:block absolute left-1/2 top-[calc(50%+60px)] -translate-1/2 w-[400px] h-[400px] bg-[image:var(--services-shape)] bg-cover">
+          {/* <div className="hidden lg:block absolute left-1/2 top-[calc(50%+60px)] -translate-1/2 w-[400px] h-[400px] bg-[image:var(--services-shape)] bg-cover">
             <div className="rounded-full absolute left-[50.6%] top-[51.6%] -translate-1/2 w-[115px] h-[115px] bg-[image:var(--services-shape-inside)] bg-cover motion-safe:animate-[spin_5s_linear_infinite] duration-initial"></div>
-          </div>
-          <div className="md:hidden lg:block absolute right-[-505px] bottom-[-300px] -translate-1/2 w-[637px] h-[600px] bg-[image:var(--services-road-shap)] bg-cover -z-10 opacity-40"></div>
-          <div className="md:hidden lg:block absolute left-[315px] top-[73px] -translate-1/2 w-[800px] rotate-[290deg] h-[600px] bg-[image:var(--services-road-shap-2)] bg-cover -z-10 opacity-40"></div>
+          </div> */}
+          {/* <div className="md:hidden lg:block absolute right-[-505px] bottom-[-300px] -translate-1/2 w-[637px] h-[600px] bg-[image:var(--services-road-shap)] bg-cover -z-10 opacity-40"></div> */}
+          {/* <div className="md:hidden lg:block absolute left-[315px] top-[73px] -translate-1/2 w-[800px] rotate-[290deg] h-[600px] bg-[image:var(--services-road-shap-2)] bg-cover -z-10 opacity-40"></div> */}
 
           <div
             className={cls(
-              "hidden lg:block absolute w-[200px] h-[350px] rotate-[150deg] bg-[image:var(--services-car-pic)] bg-cover",
+              "hidden lg:block absolute w-[200px] top-[-300px] left-[-180px] h-[350px] rotate-[120deg] bg-[image:var(--services-car-pic)] bg-cover",
               runFirstCar
-                ? "animate-car1-moving top-[-93px] left-[70px]"
+                ? "animate-car1-moving"
                 : "top-[-400] left-0"
             )}
           ></div>
           <div
-            ref={car2AnimationRef}
             className={cls(
-              "hidden lg:block absolute w-[200px] h-[350px] rotate-[280deg] bg-[image:var(--services-car-pic)] bg-cover",
-              runSecondCar
-                ? "animate-car2-moving bottom-[-100px] right-0"
-                : "top-[-185] right-[-200px]"
+              "hidden lg:block absolute w-[200px] h-[350px] bottom-[-100px] right-[-48px] rotate-[300deg] bg-[image:var(--services-car-pic)] bg-cover",
+              runFirstCar ? "animate-car2-moving" : "top-[-185] right-[-200px]"
             )}
           ></div>
         </div>
