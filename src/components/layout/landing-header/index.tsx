@@ -6,8 +6,11 @@ import NavigationLinks from "./navigation-links";
 import BaseButton from "@/components/ui/base-button";
 import cls from "classnames";
 import LangSwitcher from "@/components/ui/lang-switcher";
+import { usePathname } from "@/i18n/navigation";
 
-const LandingHeader = () => {
+const LandingHeader = ({ locale }: { locale: string }) => {
+  const pathname = usePathname();
+
   const [isHeaderActive, setIsHeaderActive] = useState(false);
   const [openMenu, setOpenMenu] = useState(false);
   useEffect(() => {
@@ -39,7 +42,7 @@ const LandingHeader = () => {
         >
           <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
             <div className="logo bg-[#D5D5D5] z-10 w-fit relative before:absolute before:inset-0 before:bg-[image:var(--logo-shape)] before:bg-cover before:-z-10">
-              <Link href="/">
+              <Link href="/" rel="preload">
                 <Image
                   src="/assets/images/logo.svg"
                   width={60}
@@ -50,10 +53,13 @@ const LandingHeader = () => {
             </div>
 
             <div className="flex items-center lg:order-2">
-              <div className="actions ml-6" dir="ltr">
+              <div
+                className={cls("actions", locale === "ar" ? "ml-6" : "mr-6")}
+                dir="ltr"
+              >
                 <BaseButton
-                  type="button"
-                  className="hidden lg:block"
+                  href="https://wa.me/966557827776"
+                  className="!hidden lg:!block"
                   theme="primary"
                   size="header"
                 >
@@ -63,7 +69,10 @@ const LandingHeader = () => {
               <button
                 data-collapse-toggle="mobile-menu-2"
                 type="button"
-                className="inline-flex items-center p-2 ml-1 lg:hidden outline-none"
+                className={cls(
+                  "inline-flex items-center p-2 lg:hidden outline-none",
+                  locale === "ar" ? "!ml-3" : "!mr-3"
+                )}
                 aria-controls="mobile-menu-2"
                 aria-expanded="false"
               >
@@ -83,9 +92,13 @@ const LandingHeader = () => {
                   </svg>
                 </label>
               </button>
-              <LangSwitcher />
+              <LangSwitcher lang={locale} />
             </div>
-            <NavigationLinks openMenu={openMenu} setOpenMenu={setOpenMenu} />
+            <NavigationLinks
+              pathname={pathname}
+              openMenu={openMenu}
+              setOpenMenu={setOpenMenu}
+            />
           </div>
         </div>
       </nav>

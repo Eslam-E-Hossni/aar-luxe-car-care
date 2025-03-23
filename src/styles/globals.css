@@ -1,4 +1,7 @@
 @import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --brown: #cdb59d;
   --dark-brown: #4d3a2e;
@@ -22,6 +25,14 @@
   --services-car-pic: url("/assets/images/cars/brown-car1.png");
   --partners-car-pic: url("/assets/images/cars/silver-car.png");
   --partners-shader: url("/assets/images/shader2.png");
+
+  /* Services */
+  --service-1-bg: url("/assets/images/services/img-1.png");
+  --service-2-bg: url("/assets/images/services/img-2.png");
+  --service-3-bg: url("/assets/images/services/img-3.png");
+  --service-4-bg: url("/assets/images/services/img-4.png");
+  --service-5-bg: url("/assets/images/services/img-5.png");
+  --service-6-bg: url("/assets/images/services/img-6.png");
 }
 
 @theme inline {
@@ -39,13 +50,21 @@
   --logo-shape: var(--logo-shape);
   --about-us-bg: var(--about-us-bg);
   --lines-shape: var(--lines-shape);
+  --partners-car-pic: var(--partners-car-pic);
+  --partners-shader: var(--partners-shader);
+
+  /* Services */
   --services-shape: var(--services-shape);
   --services-shape-inside: var(--services-shape-inside);
   --services-road-shap: var(--services-road-shap);
   --services-road-shap-2: var(--services-road-shap-2);
   --services-car-pic: var(--services-car-pic);
-  --partners-car-pic: var(--partners-car-pic);
-  --partners-shader: var(--partners-shader);
+  --service-1-bg: var(--service-1-bg);
+  --service-2-bg: var(--service-2-bg);
+  --service-3-bg: var(--service-3-bg);
+  --service-4-bg: var(--service-4-bg);
+  --service-5-bg: var(--service-5-bg);
+  --service-6-bg: var(--service-6-bg);
 }
 
 @theme {

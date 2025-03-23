@@ -6,7 +6,7 @@ import cls from "classnames";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-const ServicesSection = () => {
+const ServicesSection = ({ locale }: { locale: string }) => {
   const t = useTranslations("components.ServicesSection");
   const list = t.raw("cards");
 
@@ -29,14 +29,12 @@ const ServicesSection = () => {
   return (
     <section
       ref={car1AnimationRef}
-      id="services-section"
+      id="services"
       className="w-full bg-[image:var(--lines-shape)] min-h-[calc(100vh-92px)] relative overflow-hidden py-16"
     >
       <div className="container">
         <div>
-          <h2 className="font-heading-arabic !text-6xl font-semibold leading-24">
-            {t("title")}
-          </h2>
+          <h2 className="!text-6xl font-semibold leading-24">{t("title")}</h2>
           {list.map((row: any, idx: number) => {
             return (
               <div
@@ -64,10 +62,12 @@ const ServicesSection = () => {
                             className="text pt-[35px] px-[20px] pb-[20px] mx-[15px] rounded-[15px_0_15px_15px] relative z-20 bg-white"
                             style={{
                               clipPath:
-                                "polygon(0 15%, 100% 0%, 100% 100%, 0% 100%)",
+                                locale === "ar"
+                                  ? "polygon(0 12%, 100% 0%, 100% 100%, 0% 100%)"
+                                  : "polygon(0 0, 100% 12%, 100% 100%, 0% 100%)",
                             }}
                           >
-                            <h4 className="font-heading-arabic font-semibold text-2xl mb-4 transition-colors group-hover:text-primary">
+                            <h4 className="font-semibold text-2xl mb-4 transition-colors group-hover:text-primary">
                               {card.title}
                             </h4>
                             <p className="text-[#7a7979] leading-[25px]">
@@ -75,7 +75,7 @@ const ServicesSection = () => {
                             </p>
                             <div className="flex justify-end">
                               <Link
-                                href={card.knowMore.link}
+                                href={`/services${card.knowMore.slug}`}
                                 className="text-[#7a7979] text-sm font-medium transition-colors group-hover:text-primary mt-2"
                               >
                                 {card.knowMore.text}
@@ -101,9 +101,7 @@ const ServicesSection = () => {
           <div
             className={cls(
               "hidden lg:block absolute w-[200px] top-[-300px] left-[-180px] h-[350px] rotate-[120deg] bg-[image:var(--services-car-pic)] bg-cover",
-              runFirstCar
-                ? "animate-car1-moving"
-                : "top-[-400] left-0"
+              runFirstCar ? "animate-car1-moving" : "top-[-400] left-0"
             )}
           ></div>
           <div

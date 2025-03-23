@@ -38,12 +38,12 @@ export default async function Home({
   return (
     <div className="">
       <HeroSection locale={locale} />
-      <AboutUsSection />
-      <WhyUsSection />
-      <ServicesSection />
+      <AboutUsSection locale={locale} />
+      <WhyUsSection locale={locale} />
+      <ServicesSection locale={locale} />
       <GellarySection />
       <PartnersSection />
-      <ContactSection />
+      <ContactSection locale={locale} />
     </div>
   );
 }

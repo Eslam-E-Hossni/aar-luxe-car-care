@@ -1,20 +1,22 @@
 "use client";
-import { useRouter } from "@/i18n/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 import { useClickOutside } from "@/lib/hooks/useClickOutside";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { TfiWorld } from "react-icons/tfi";
+import cls from "classnames";
 
-const LangSwitcher = () => {
+const LangSwitcher = ({ lang }: { lang: string }) => {
   const [openCountriesWindow, setOpenCountriesWindow] = useState(false);
   const wrapperRef = useRef(null);
   const router = useRouter(); // Initialize the router
+  const pathname = usePathname();
 
   useClickOutside(wrapperRef, setOpenCountriesWindow);
 
   // Function to handle locale change
   const handleLocaleChange = (locale: string) => {
-    router.push("/", { locale }); // Change the locale
+    router.replace(pathname, { locale }); // Change the locale
     setOpenCountriesWindow(false); // Close the dropdown
   };
 
@@ -25,12 +27,17 @@ const LangSwitcher = () => {
         className="cursor-pointer flex items-center"
         onClick={() => setOpenCountriesWindow(!openCountriesWindow)}
       >
-        <TfiWorld size={23} className="mr-2" color="#b9b9b9" />
+        <TfiWorld size={23} color="#b9b9b9" />
       </button>
       {openCountriesWindow && (
         <div
           dir="ltr"
-          className="absolute min-w-[150px] py-2 top-[calc(100%+25px)] left-0 xl:left-1/2 xl:-translate-x-1/2 z-10 shadow-md bg-header-bg"
+          className={cls(
+            "absolute min-w-[150px] py-2 top-[calc(100%+25px)] z-10 shadow-md bg-header-bg",
+            lang === "ar"
+              ? "left-0 xl:left-1/2 xl:-translate-x-1/2"
+              : "right-0 xl:right-1/2 xl:translate-x-1/2"
+          )}
         >
           <div className="w-full">
             <div className="countries">

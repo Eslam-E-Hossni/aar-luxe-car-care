@@ -1,7 +1,7 @@
 import type React from "react";
 
 export interface IBaseButton {
-  type: "button" | "submit";
+  type?: "button" | "submit";
   children: React.ReactNode;
   className?: string;
   theme?: "primary" | "secondary" | "navigate" | "filter";

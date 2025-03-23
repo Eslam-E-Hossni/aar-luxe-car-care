@@ -8,7 +8,7 @@ import BaseButton from "@/components/ui/base-button";
 
 import cls from "classnames";
 
-const NavigationLinks = ({ openMenu, setOpenMenu }: any) => {
+const NavigationLinks = ({ pathname, openMenu, setOpenMenu }: any) => {
   const t = useTranslations("layout.Header");
   return (
     <div
@@ -21,12 +21,32 @@ const NavigationLinks = ({ openMenu, setOpenMenu }: any) => {
       id="mobile-menu-2"
     >
       <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0 mb-4 lg:mb-0">
+        <li className="text-lg font-medium transition-all">
+          <Link
+            rel="preload"
+            href={"/"}
+            className={cls(
+              "block py-3 pr-4 pl-3 border-b-2 border-gray-500 lg:border-0 lg:p-0 hover:text-white",
+              pathname === "/" ? "text-white" : "text-gray-300"
+            )}
+            aria-current="page"
+            onClick={() => setOpenMenu(false)}
+          >
+            {t("links.home")}
+          </Link>
+        </li>
         {NAVIGATION_MENU.map((link, idx) => {
           return (
-            <li key={idx} className="text-lg font-medium transition-all group">
+            <li key={idx} className="text-lg font-medium transition-all">
               <Link
+                rel="preload"
                 href={link.href}
-                className="block py-3 pr-4 pl-3 border-b-2 border-gray-500 lg:border-0 lg:hover:text-white lg:p-0 text-gray-300 hover:text-white group-first:text-white"
+                className={cls(
+                  "block py-3 pr-4 pl-3 border-b-2 border-gray-500 lg:border-0 lg:p-0 hover:text-white",
+                  pathname.includes(link.href.slice(1))
+                    ? "text-white font-semibold"
+                    : "text-gray-300"
+                )}
                 aria-current="page"
                 onClick={() => setOpenMenu(false)}
               >

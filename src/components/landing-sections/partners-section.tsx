@@ -25,6 +25,7 @@ const PartnersSection = () => {
     <section
       ref={car1AnimationRef}
       id="cars-logo"
+      dir="rtl"
       className="w-full bg-[image:var(--lines-shape)] overflow-hidden relative flex justify-center items-center"
     >
       <div className="w-full h-[350px] top-[calc(50%+50px)] -translate-y-1/2 absolute">
@@ -45,7 +46,9 @@ const PartnersSection = () => {
                   fill
                   className={cls(
                     "relative z-10 object-cover mt-[30px] -mr-[25px]",
-                    runCar ? "animate-logos-car-moving translate-y-0" : "translate-y-full"
+                    runCar
+                      ? "animate-logos-car-moving translate-y-0"
+                      : "translate-y-full"
                   )}
                   alt="car"
                 />
@@ -54,10 +57,7 @@ const PartnersSection = () => {
             <div className="w-full lg:w-2/3 flex flex-col justify-between mt-2 py-8 lg:py-0">
               {carsLogo.map((row, idx) => {
                 return (
-                  <div
-                    className="logos flex mb-6 last:mb-0"
-                    key={idx}
-                  >
+                  <div className="logos flex mb-6 last:mb-0" key={idx}>
                     {row.map((logo) => {
                       return (
                         <div

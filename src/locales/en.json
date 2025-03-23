@@ -1,17 +1,259 @@
 {
   "global": {},
   "pages": {
-    "homePage": {}
+    "homePage": {},
+    "services": {
+      "car-paint-protection-(PPF)-service": {
+        "title": "Car Paint Protection (PPF)",
+        "imgSrc": "/assets/images/services/img-1.png",
+        "subtitle": {
+          "text": "Protect Your Car with Premium Transparent and Colored Protection Films",
+          "content": "At AAR-LUXE, we offer high-quality transparent and colored protection films designed to safeguard your vehicle from scratches, stone chips, and harmful UV rays. Utilizing the latest American technologies, our films provide unmatched durability and clarity, ensuring your car stays pristine for years to come."
+        },
+        "list": {
+          "title": "Why Choose Our Protection Films?",
+          "items": [
+            {
+              "bold": "Advanced Scratch Resistance:",
+              "text": "Protects your car’s paint from scratches and abrasions."
+            },
+            {
+              "bold": "UV Protection:",
+              "text": "Shields your vehicle from sunlight, preventing fading and discoloration."
+            },
+            {
+              "bold": "Customizable Options:",
+              "text": "Choose from transparent or colored films to match your style."
+            },
+            {
+              "bold": "Long-Lasting Warranty:",
+              "text": "Enjoy peace of mind with a warranty of up to 7 years."
+            }
+          ],
+          "content": "Our films are crafted with precision and expertise, making them the ideal choice for car owners who value quality, performance, and aesthetics. Whether you’re looking to preserve your car’s resale value or simply enhance its appearance, our protection films deliver unmatched results."
+        },
+        "visit": {
+          "title": {
+            "text": "Protect Your Investment",
+            "span": "Today!"
+          },
+          "content": {
+            "text": "Visit to learn more about our car protection solutions and schedule an appointment. Drive with confidence, knowing your car is protected by the best in the industry.",
+            "link": "AAR-LUXE"
+          }
+        }
+      },
+      "thermal-insulation-tinting-service": {
+        "title": "Thermal Insulation Tinting",
+        "imgSrc": "/assets/images/services/img-2.png",
+        "subtitle": {
+          "text": "Upgrade Your Comfort with Advanced Thermal Insulation Tinting",
+          "content": "At AAR-LUXE, we provide advanced thermal insulation tinting designed to block heat and harmful UV rays, ensuring a cooler and more comfortable ride. Available in a variety of shades to match your style and needs, our tinting solutions come with a 7-year peace of mind warranty, so you can drive with confidence."
+        },
+        "list": {
+          "title": "Why Choose Our Tinting Solutions?",
+          "items": [
+            {
+              "bold": "Heat Blocking Technology:",
+              "text": "Keeps your car cool even in the hottest weather."
+            },
+            {
+              "bold": "UV Ray Protection",
+              "text": "Shields you and your car’s interior from harmful sun damage."
+            },
+            {
+              "bold": "Customizable Shades",
+              "text": "Choose from a range of tints to suit your preferences."
+            },
+            {
+              "bold": "7-Year Warranty",
+              "text": "Enjoy long-lasting performance and reliability."
+            }
+          ],
+          "content": "Our Advanced Thermal Insulation Tinting are crafted with precision and expertise, making them the ideal choice for car owners who value quality, performance, and aesthetics. Whether you’re looking to preserve your car’s resale value or simply enhance its appearance, our protection Advanced Thermal Insulation Tinting deliver unmatched results."
+        },
+        "visit": {
+          "title": {
+            "text": "Enhance Your Driving Experience",
+            "span": "Today!"
+          },
+          "content": {
+            "text": "Visit to learn more about our thermal insulation tinting solutions and schedule an appointment. Drive in comfort, knowing your car is protected by the best in the industry.",
+            "link": "AAR-LUXE"
+          }
+        }
+      },
+      "polishing-and-ceramic-coating-service": {
+        "title": "Polishing and Ceramic Coating",
+        "imgSrc": "/assets/images/services/img-3.png",
+        "subtitle": {
+          "text": "Superior Paint Protection with Advanced Ceramic Coating",
+          "content": "At AAR-LUXE, we offer advanced ceramic coating that provides superior protection for your car’s paint. Our coating not only enhances your car’s shine but also shields it from dirt, scratches, and environmental damage. With free annual maintenance, you can enjoy long-lasting beauty and protection for your vehicle."
+        },
+        "list": {
+          "title": "Why Choose Our Ceramic Coating?",
+          "items": [
+            {
+              "bold": "Enhanced Shine:",
+              "text": "Gives your car a glossy, showroom-like finish."
+            },
+            {
+              "bold": "Scratch Resistance:",
+              "text": "Protects your car’s paint from scratches and swirl marks."
+            },
+            {
+              "bold": "Dirt Repellent:",
+              "text": "Keeps your car cleaner for longer by repelling dirt and grime."
+            },
+            {
+              "bold": "Free Annual Maintenance:",
+              "text": "Enjoy ongoing care to maintain the coating’s performance."
+            }
+          ],
+          "content": "Our Superior Paint Protection are crafted with precision and expertise, making them the ideal choice for car owners who value quality, performance, and aesthetics. Whether you’re looking to preserve your car’s resale value or simply enhance its appearance, our protection Superior Paint Protection deliver unmatched results."
+        },
+        "visit": {
+          "title": {
+            "text": "Protect Your Car’s Shine",
+            "span": "Today!"
+          },
+          "content": {
+            "text": "Visit to learn more about our ceramic coating services and schedule an appointment. Drive with pride, knowing your car is protected by the best in the industry.",
+            "link": "AAR-LUXE"
+          }
+        }
+      },
+      "colored-paint-protection-film-service": {
+        "title": "Colored Paint Protection Film",
+        "imgSrc": "/assets/images/services/img-4.png",
+        "subtitle": {
+          "text": "Transform Your Car’s Look with Luxurious Color Wraps",
+          "content": "At AAR-LUXE, we offer a huge selection of colors and types of luxurious wraps to help you achieve the look you’ve always dreamed of for your car. Whether you want a bold new color, a matte finish, or a custom design, our high-quality wraps are designed to transform your car’s appearance while protecting its original paint."
+        },
+        "list": {
+          "title": "Why Choose Our Colored Paint Protection Film?",
+          "items": [
+            {
+              "bold": "Wide Variety of Colors:",
+              "text": "Choose from a vast range of shades and finishes."
+            },
+            {
+              "bold": "Premium Quality:",
+              "text": "Made with durable materials for a flawless, long-lasting finish."
+            },
+            {
+              "bold": "Paint Protection:",
+              "text": "Safeguard your car’s original paint from scratches and UV damage."
+            },
+            {
+              "bold": "Customizable Options",
+              "text": "Create a unique look that reflects your style."
+            }
+          ],
+          "content": "Our Colored Paint Protection Film are crafted with precision and expertise, making them the ideal choice for car owners who value quality, performance, and aesthetics. Whether you’re looking to preserve your car’s resale value or simply enhance its appearance, our protection Colored Paint Protection Film deliver unmatched results."
+        },
+        "visit": {
+          "title": {
+            "text": "Redefine Your Car’s Style",
+            "span": "Today!"
+          },
+          "content": {
+            "text": "Visit to explore our luxurious wrap options and schedule an appointment. Drive with confidence, knowing your car looks as good as new",
+            "link": "AAR-LUXE"
+          }
+        }
+      },
+      "cosmetic-car-painting-service": {
+        "title": "Cosmetic Car Painting",
+        "imgSrc": "/assets/images/services/img-5.png",
+        "subtitle": {
+          "text": "Revitalize Your Car with Professional Cosmetic Painting",
+          "content": "we offer professional cosmetic painting services using advanced techniques to deliver a perfect, long-lasting color finish. Whether your car needs a touch-up or a complete color transformation, our expert team ensures flawless results backed by a 5-year warranty for your peace of mind."
+        },
+        "list": {
+          "title": "Why Choose Our Cosmetic Painting Services?",
+          "items": [
+            {
+              "bold": "Advanced Techniques:",
+              "text": "Achieve a flawless, showroom-quality finish."
+            },
+            {
+              "bold": "Long-Lasting Results: ",
+              "text": "Durable paint that stays vibrant for years."
+            },
+            {
+              "bold": "5-Year Warranty:",
+              "text": "Enjoy confidence in our workmanship and materials."
+            },
+            {
+              "bold": "Custom Color Matching:",
+              "text": "Perfectly match your car’s original or desired color."
+            }
+          ],
+          "content": "Our Professional Cosmetic Painting are crafted with precision and expertise, making them the ideal choice for car owners who value quality, performance, and aesthetics. Whether you’re looking to preserve your car’s resale value or simply enhance its appearance, our protection Professional Cosmetic Painting deliver unmatched results."
+        },
+        "visit": {
+          "title": {
+            "text": "Give Your Car a Fresh Look",
+            "span": "Today!"
+          },
+          "content": {
+            "text": "Visit to learn more about our cosmetic painting services and schedule an appointment. Drive with pride, knowing your car looks as good as new.",
+            "link": "AAR-LUXE"
+          }
+        }
+      },
+      "interior-care-and-upholstery-service": {
+        "title": "Interior Care and Upholstery",
+        "imgSrc": "/assets/images/services/img-6.png",
+        "subtitle": {
+          "text": "Elevate Your Car’s Interior with Luxury Upholstery Services",
+          "content": "At AAR-LUXE, we provide luxury upholstery services for car seats, using the finest types of leather and microfiber. Whether you’re looking to restore your car’s interior or customize it to match your style, our expert team offers tailored solutions with the option to customize designs and colors according to your preferences."
+        },
+        "list": {
+          "title": "Why Choose Our Interior Care and Upholstery Services?",
+          "items": [
+            {
+              "bold": "Premium Materials:",
+              "text": "Choose from the finest leather and microfiber for unmatched comfort and durability."
+            },
+            {
+              "bold": "Customizable Designs:",
+              "text": "Personalize your car’s interior with unique designs and colors."
+            },
+            {
+              "bold": "Expert Craftsmanship:",
+              "text": "Achieve a flawless, luxurious finish with our skilled professionals."
+            },
+            {
+              "bold": "Enhanced Comfort:",
+              "text": "Transform your car’s seats into a comfortable and stylish space."
+            }
+          ],
+          "content": "Our Car’s Interior with Luxury Upholstery are crafted with precision and expertise, making them the ideal choice for car owners who value quality, performance, and aesthetics. Whether you’re looking to preserve your car’s resale value or simply enhance its appearance, our protection Car’s Interior with Luxury Upholstery deliver unmatched results."
+        },
+        "visit": {
+          "title": {
+            "text": "Upgrade Your Car’s Interior",
+            "span": "Today!"
+          },
+          "content": {
+            "text": "Visit to explore our luxury upholstery options and schedule an appointment. Drive in style and comfort, knowing your car’s interior is in expert hands.",
+            "link": "AAR-LUXE"
+          }
+        }
+      }
+    }
   },
   "layout": {
     "Header": {
       "links": {
         "home": "Home",
-        "whoUs": "Who We Are",
-        "services": "Our Premium Services",
-        "projects": "Our Work",
+        "aboutUs": "About Us",
+        "whyUs": "Why Us",
+        "services": "Services",
         "bookOnline": "Book Online",
-        "branches": "Our Branches",
+        "branches": "Branches",
         "contact": "Contact Us"
       }
     },
@@ -88,9 +330,7 @@
     "HeroSection": {
       "title": "Protect Your Car with the Highest Quality Standards",
       "description": {
-        "line1": "We offer you a unique experience in the world of car care",
-        "line2": "Where quality and professionalism meet to provide the best services for your car",
-        "line3": "With the best materials and a warranty of up to 7 years"
+        "line1": "We offer a unique car care experience, combining quality and professionalism to deliver top services using the best materials, with a warranty of up to 7 years."
       },
       "button": "Book Your Appointment Now"
     },
@@ -132,7 +372,7 @@
             "description": "We provide transparent and colored protection films made with the latest American technologies to protect your car from scratches, stones, and sunlight, with a warranty of up to 7 years.",
             "knowMore": {
               "text": "Learn More ..",
-              "link": "#"
+              "slug": "/car-paint-protection-(PPF)-service"
             },
             "img": "img-1.png"
           },
@@ -141,7 +381,7 @@
             "description": "Advanced thermal insulation tinting that blocks heat and UV rays, available in different shades according to your requirements, with a 7-year peace of mind warranty.",
             "knowMore": {
               "text": "Learn More ..",
-              "link": "#"
+              "slug": "/thermal-insulation-tinting-service"
             },
             "img": "img-2.png"
           }
@@ -152,7 +392,7 @@
             "description": "Superior protection for your car's paint with advanced ceramic coating that enhances the car's shine and protects it from dirt and scratches, with free annual maintenance.",
             "knowMore": {
               "text": "Learn More ..",
-              "link": "#"
+              "slug": "/polishing-and-ceramic-coating-service"
             },
             "img": "img-3.png"
           },
@@ -161,7 +401,7 @@
             "description": "Change your car's color to the look you dream of with a huge selection of colors and types of luxurious wraps.",
             "knowMore": {
               "text": "Learn More ..",
-              "link": "#"
+              "slug": "/colored-paint-protection-film-service"
             },
             "img": "img-4.png"
           }
@@ -172,7 +412,7 @@
             "description": "We provide professional cosmetic painting services with advanced techniques for a perfect, long-lasting color, with a 5-year warranty.",
             "knowMore": {
               "text": "Learn More ..",
-              "link": "#"
+              "slug": "/cosmetic-car-painting-service"
             },
             "img": "img-5.png"
           },
@@ -181,7 +421,7 @@
             "description": "Luxury upholstery services for seats with the finest types of leather and microfiber, with the possibility of customizing the design and colors according to your preference.",
             "knowMore": {
               "text": "Learn More ..",
-              "link": "#"
+              "slug": "/interior-care-and-upholstery-service"
             },
             "img": "img-6.png"
           }
@@ -197,7 +437,8 @@
       "form": {
         "name": "Name",
         "message": "Write your message",
-        "submit": "Send"
+        "submit": "Send",
+        "selectCountryPlaceholder": "Select Country"
       }
     }
   }
