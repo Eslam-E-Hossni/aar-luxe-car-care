@@ -2,11 +2,11 @@ import BaseButton from "../../ui/base-button";
 import { getTranslations } from "next-intl/server";
 import CountriesInput from "./countries-input";
 
-const ContactSection = async () => {
+const ContactSection = async ({ locale }: { locale: string }) => {
   const t = await getTranslations("components.ContactUsSection");
 
   return (
-    <section id="contact-form" className="">
+    <section id="contact-us" className="">
       <div className="inner pb-12">
         <div className="flex flex-col">
           <div className="min-h-[calc(40vh)] bg-header-bg">
@@ -14,10 +14,10 @@ const ContactSection = async () => {
               <div className="py-12">
                 <div className="flex justify-center">
                   <div className="h-full text-center">
-                    <h2 className="font-heading-arabic !text-5xl font-semibold text-white mb-5">
+                    <h2 className="!text-5xl font-semibold text-white mb-5">
                       {t("title")}
                     </h2>
-                    <p className="font-heading-arabic text-lg lg:w-[700px] text-white leading-[32px]">
+                    <p className="text-lg lg:w-[700px] text-white leading-[32px]">
                       {t("description")}
                     </p>
                   </div>
@@ -40,7 +40,7 @@ const ContactSection = async () => {
                           placeholder={t("form.name")}
                         />
                       </div>
-                      <CountriesInput />
+                      <CountriesInput locale={locale} />
                     </div>
                     <div className="form-group flex justify-center mt-6">
                       <div className="form-controll w-4/5 lg:w-[calc(66.666%+40px)]">

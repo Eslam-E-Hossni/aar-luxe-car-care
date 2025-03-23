@@ -1,8 +1,9 @@
 import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import React from "react";
+import cls from "classnames";
 
-const WhyUsSection = async () => {
+const WhyUsSection = async ({ locale }: { locale: string }) => {
   const t = await getTranslations("components.WhyUsSection");
   const list = t.raw("list");
   return (
@@ -12,7 +13,7 @@ const WhyUsSection = async () => {
     >
       <div className="container">
         <div className="">
-          <h2 className="font-heading-arabic !text-6xl font-semibold leading-24 !mb-10">
+          <h2 className="!text-6xl font-semibold leading-24 !mb-10">
             {t("title")}
           </h2>
 
@@ -24,7 +25,7 @@ const WhyUsSection = async () => {
               ) => {
                 return (
                   <div className="flex items-center w-fit" key={idx}>
-                    <div className="icon ml-7">
+                    <div className={cls("icon", locale === "ar" ? "ml-7" : "mr-7")}>
                       <Image
                         src={`/assets/images/icons/why-us/${item["icon"]}`}
                         width={80}
@@ -33,10 +34,10 @@ const WhyUsSection = async () => {
                       />
                     </div>
                     <div className="text">
-                      <h3 className="font-heading-arabic text-3xl font-semibold mb-4">
+                      <h3 className="text-3xl font-semibold mb-4">
                         {item["title"]}
                       </h3>
-                      <p className="font-heading-arabic text-lg font-normal max-w-[300px] leading-[28px]">
+                      <p className="text-lg font-normal max-w-[300px] leading-[28px]">
                         {item["description"]}
                       </p>
                     </div>

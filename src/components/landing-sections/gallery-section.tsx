@@ -33,7 +33,7 @@ const GallerySection = async () => {
     >
       <div className="container">
         <div className="overflow-hidden">
-          <h2 className="font-heading-arabic !text-6xl font-semibold leading-24 !mb-10">
+          <h2 className="!text-6xl font-semibold leading-24 !mb-10">
             {t("GallerySection.title")}
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative z-20">

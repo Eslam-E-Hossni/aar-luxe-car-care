@@ -83,11 +83,15 @@ export default async function LocaleLayout({
       />
       <link rel="canonical" href="https://aarluxe.online" />
       <body
-        className={`${ibmPlexSansArabic.variable} ${chakraPetch.variable} antialiased overflow-x-hidden`}
+        className={`${ibmPlexSansArabic.variable} ${
+          chakraPetch.variable
+        } antialiased overflow-x-hidden ${
+          locale === "ar" ? "font-heading-arabic" : "font-heading-en"
+        }`}
         cz-shortcut-listen="true"
       >
         <NextIntlClientProvider>
-          <LandingHeader />
+          <LandingHeader locale={locale} />
           <main>{children}</main>
           <LandingFooter />
           <WhatsappIcon />

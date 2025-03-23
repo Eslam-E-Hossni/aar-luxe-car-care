@@ -5,18 +5,32 @@ import React from "react";
 
 import {
   FaFacebook,
-  FaGithub,
   FaInstagram,
-  FaTwitter,
-  FaTwitch,
+  FaSnapchat,
+  FaGoogle,
 } from "react-icons/fa";
 
 const items = [
-  { name: "Facebook", icon: FaFacebook, link: "https://www.facebook.com/" },
-  { name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/" },
-  { name: "Twitter", icon: FaTwitter, link: "https://twitter.com/" },
-  { name: "Twitch", icon: FaTwitch, link: "https://www.twitch.tv/" },
-  { name: "Github", icon: FaGithub, link: "https://github.com/" },
+  {
+    name: "Facebook",
+    icon: FaFacebook,
+    link: "https://www.facebook.com/share/15qFthD2iu/?mibextid=wwXIfr",
+  },
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    link: "https://www.instagram.com/aarluxe.ksa?igsh=MTcwbnY5NnBpNWt0bg==",
+  },
+  {
+    name: "Twitter",
+    icon: FaSnapchat,
+    link: "https://www.snapchat.com/add/aarluxe",
+  },
+  {
+    name: "Twitch",
+    icon: FaGoogle,
+    link: "https://maps.app.goo.gl/u6jj2soZ4qcRMar19?g_st=com.google.maps.preview.copy",
+  },
 ];
 
 const paymentMethods = [
@@ -46,19 +60,15 @@ const LandingFooter = async () => {
                   index: number
                 ) => (
                   <div key={index}>
-                    <h6 className="font-heading-arabic text-lg font-bold mb-2">
-                      {section.title}
-                    </h6>
+                    <h6 className="text-lg font-bold mb-2">{section.title}</h6>
                     <ul className="w-fit">
                       {section.links.map(
                         (link: { text: string; link: string }, i: number) => (
                           <li
                             key={i}
-                            className="text-gray-500 font-heading-arabic hover:text-white"
+                            className="text-gray-500 hover:text-white"
                           >
-                            <p className="block py-1.5">
-                              {link.text}
-                            </p>
+                            <p className="block py-1.5">{link.text}</p>
                           </li>
                         )
                       )}
@@ -69,7 +79,7 @@ const LandingFooter = async () => {
 
               <div className="col-span-2 pt-8 md:pt-0">
                 <div>
-                  <p className="font-bold font-heading-arabic text-lg mb-8">
+                  <p className="font-bold text-lg mb-8">
                     {t("newsteller.title")}
                   </p>
                   <form className="flex flex-col lg:flex-row">
@@ -108,21 +118,27 @@ const LandingFooter = async () => {
 
             <div className="flex flex-col py-2 mx-auto justify-between sm:flex-row text-center text-gray-500">
               <p className="py-4">{t("copyright")}</p>
-              <div className="flex justify-between sm:w-[300px] pt-4 text-2xl">
+              <div className="flex justify-center gap-x-8 sm:w-[300px] pt-4 text-2xl">
                 {items.map((x, index) => {
-                  return <x.icon key={index} className="hover:text-white" />;
+                  return (
+                    <a href={x.link} target="_blank" key={index}>
+                      <x.icon className="hover:text-white" />
+                    </a>
+                  );
                 })}
               </div>
             </div>
             <div className="flex flex-col mx-auto justify-center sm:flex-row text-center text-gray-500">
               <div className="py-4 flex items-center justify-center gap-x-3">
                 <p>{t("madeBy")}</p>
-                <Image
-                  src={"/assets/images/10trend-logo.png"}
-                  width={70}
-                  height={70}
-                  alt="ten Trend logo"
-                />
+                <a href="https://www.10trend.ae/" target="_blank">
+                  <Image
+                    src={"/assets/images/10trend-logo.png"}
+                    width={70}
+                    height={70}
+                    alt="https://www.10trend.ae/ logo from https://aarluxe.online/"
+                  />
+                </a>
               </div>
             </div>
           </div>
