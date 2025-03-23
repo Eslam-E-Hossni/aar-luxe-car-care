@@ -23,8 +23,8 @@ const AboutUsSection = async ({ locale }: { locale: string }) => {
             </div>
           </div>
           <div className="w-full lg:w-2/3 lg:min-h-[calc(100vh-92px)] flex justify-center items-center -order-1 lg:order-2">
-            {/* lg */}
-            <div className="hidden lg:block relative z-10">
+            {/* xl */}
+            <div className="hidden xl:block relative z-10">
               <Image
                 src={"/assets/images/cars/black-car.png"}
                 width={750}
@@ -41,7 +41,36 @@ const AboutUsSection = async ({ locale }: { locale: string }) => {
                   "flag absolute -z-10",
                   locale === "ar"
                     ? "top-[-195px] left-[30px] rotate-12"
-                    : "top-[-205px] right-[0] rotate-y-180"
+                    : "top-[-207px] right-[165px] rotate-0"
+                )}
+              >
+                <Image
+                  src={"/assets/images/about-us/saudi-flag.png"}
+                  width={350}
+                  height={350}
+                  alt={t("description")}
+                />
+              </div>
+            </div>
+            {/* LG */}
+            <div className="hidden lg:block xl:hidden relative z-10">
+              <Image
+                src={"/assets/images/cars/black-car.png"}
+                width={750}
+                height={500}
+                className={cls(
+                  "-mb-[200px]",
+                  locale === "en" && "rotate-y-180",
+                  locale === "ar" && "ml-20"
+                )}
+                alt={t("description")}
+              />
+              <div
+                className={cls(
+                  "flag absolute -z-10",
+                  locale === "ar"
+                    ? "top-[-195px] left-[30px] rotate-12"
+                    : "top-[-207px] right-[100px] rotate-0"
                 )}
               >
                 <Image
@@ -70,7 +99,7 @@ const AboutUsSection = async ({ locale }: { locale: string }) => {
                   "flag absolute -z-10",
                   locale === "ar"
                     ? "top-[-195px] left-[30px] rotate-12"
-                    : "top-[-205px] right-[0] rotate-y-180"
+                    : "top-[-207px] right-[180px] rotate-0"
                 )}
               >
                 <Image
@@ -82,7 +111,7 @@ const AboutUsSection = async ({ locale }: { locale: string }) => {
               </div>
             </div>
             {/* sm */}
-            <div className="relative z-10 md:hidden">
+            <div className="hidden sm:block relative z-10 md:hidden">
               <Image
                 src={"/assets/images/cars/black-car.png"}
                 width={900}
@@ -97,8 +126,36 @@ const AboutUsSection = async ({ locale }: { locale: string }) => {
                 className={cls(
                   "flag absolute -z-10",
                   locale === "ar"
-                    ? "top-[-140px] left-[10px] rotate-12"
-                    : "top-[-160px] right-[30px] rotate-y-180"
+                    ? "top-[-195px] left-[30px] rotate-12"
+                    : "top-[-155px] right-[190px] rotate-0"
+                )}
+              >
+                <Image
+                  src={"/assets/images/about-us/saudi-flag.png"}
+                  width={250}
+                  height={250}
+                  alt={t("description")}
+                />
+              </div>
+            </div>
+            {/* xs */}
+            <div className="sm:hidden relative z-10 md:hidden">
+              <Image
+                src={"/assets/images/cars/black-car.png"}
+                width={900}
+                height={700}
+                className={cls(
+                  locale === "en" && "rotate-y-180 !-ml-10",
+                  locale === "ar" && "ml-20"
+                )}
+                alt={t("description")}
+              />
+              <div
+                className={cls(
+                  "flag absolute -z-10",
+                  locale === "ar"
+                    ? "top-[-195px] left-[30px] rotate-12"
+                    : "top-[-155px] right-[25%] rotate-0"
                 )}
               >
                 <Image
