@@ -3,9 +3,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   output: "standalone",
-  images: {
-    domains: ["upload.wikimedia.org"],
-  },
 };
 
 const withNextIntl = createNextIntlPlugin();
