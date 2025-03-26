@@ -12,6 +12,7 @@ import "@/styles/globals.css";
 import LandingHeader from "@/components/layout/landing-header";
 import LandingFooter from "@/components/layout/landing-footer";
 import WhatsappIcon from "@/components/ui/whatsapp-icon";
+import Head from "next/head";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-plex-arabic",
@@ -46,7 +47,7 @@ export default async function LocaleLayout({
 
   return (
     <html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
-      <head>
+      <Head>
         {locale === "ar" ? (
           <>
             <title>احمي سيارتك بأعلى معايير الجودة | AAR LUXE CAR CARE</title>
@@ -136,7 +137,7 @@ export default async function LocaleLayout({
           name="google-site-verification"
           content="rZplCzD4MObzqAdvNbc1T1wm6QeQ7lLkVkYE403Amhc"
         />
-      </head>
+      </Head>
       <body
         className={`${ibmPlexSansArabic.variable} ${
           chakraPetch.variable
