@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/next-script-for-ga */
 /*
       MEWO! >(.)__
              (___/
@@ -137,6 +138,20 @@ export default async function LocaleLayout({
           name="google-site-verification"
           content="rZplCzD4MObzqAdvNbc1T1wm6QeQ7lLkVkYE403Amhc"
         />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){
+                        w[l]=w[l]||[];
+                        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+                        var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),
+                            dl=l!='dataLayer'?'&l='+l:'';
+                        j.async=true;
+                        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+                        f.parentNode.insertBefore(j,f);
+                      })(window,document,'script','dataLayer',${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`,
+          }}
+        />
       </Head>
       <body
         className={`${ibmPlexSansArabic.variable} ${
@@ -146,6 +161,14 @@ export default async function LocaleLayout({
         }`}
         cz-shortcut-listen="true"
       >
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <NextIntlClientProvider>
           <LandingHeader locale={locale} />
           <main>{children}</main>
