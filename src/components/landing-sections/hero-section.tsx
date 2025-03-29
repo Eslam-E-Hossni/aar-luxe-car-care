@@ -2,16 +2,12 @@ import SmokeScene from "../smoke-effect/smoke-scene";
 import { getTranslations } from "next-intl/server";
 import cls from "classnames";
 import BaseButton from "../ui/base-button";
-import IsIOS from "is-ios";
 
 const HeroSection = async ({ locale }: { locale: string }) => {
   const t = await getTranslations("components.HeroSection");
   return (
     <section
-      className={cls(
-        "bg-[image:var(--hero-bg)] bg-no-repeat h-screen w-full bg-cover min-h-screen relative overflow-x-hidden",
-        !IsIOS && "bg-fixed"
-      )}
+      className="bg-[image:var(--hero-bg)] bg-no-repeat h-screen w-full bg-cover min-h-screen relative overflow-x-hidden lg:bg-fixed"
       id="hero-section"
     >
       <div className="smoke-effect absolute top-0 left-0 w-full h-full z-0">

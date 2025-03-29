@@ -12,7 +12,6 @@
     "@react-three/fiber": "^9.1.0",
     "@tailwindcss/postcss": "^4.0.14",
     "classnames": "^2.5.1",
-    "is-ios": "^2.1.1",
     "next": "15.2.2",
     "next-intl": "^4.0.2",
     "postcss": "^8.5.3",
