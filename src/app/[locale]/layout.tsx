@@ -7,13 +7,12 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 
-// import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { IBM_Plex_Sans_Arabic, Chakra_Petch } from "next/font/google";
 import "@/styles/globals.css";
 import LandingHeader from "@/components/layout/landing-header";
 import LandingFooter from "@/components/layout/landing-footer";
 import WhatsappIcon from "@/components/ui/whatsapp-icon";
-import Head from "next/head";
 
 const ibmPlexSansArabic = IBM_Plex_Sans_Arabic({
   variable: "--font-plex-arabic",
@@ -27,11 +26,11 @@ const chakraPetch = Chakra_Petch({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-// export const metadata: Metadata = {
-//   title: "احمي سيارتك بأعلى معايير الجودة",
-//   description:
-//     "aar-aarluxe احمي سيارتك بأعلى معايير الجودة مع خدماتنا الفاخرة. نقدم تلميع وتغطية سيارات بضمان حتى 7 سنوات. اكتشف أفضل خدمات العناية بالسيارات في.",
-// };
+export const metadata: Metadata = {
+  title: "احمي سيارتك بأعلى معايير الجودة | AAR LUXE CAR CARE",
+  description:
+    "aar-aarluxe احمي سيارتك بأعلى معايير الجودة مع خدماتنا الفاخرة. نقدم تلميع وتغطية سيارات بضمان حتى 7 سنوات. اكتشف أفضل خدمات العناية بالسيارات في.",
+};
 
 export default async function LocaleLayout({
   children,
@@ -48,10 +47,9 @@ export default async function LocaleLayout({
 
   return (
     <html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
-      <Head>
+      <head>
         {locale === "ar" ? (
           <>
-            <title>احمي سيارتك بأعلى معايير الجودة | AAR LUXE CAR CARE</title>
             <meta
               name="twitter:title"
               content="احمي سيارتك بأعلى معايير الجودة"
@@ -84,10 +82,6 @@ export default async function LocaleLayout({
           </>
         ) : (
           <>
-            <title>
-              Protect Your Car with the Highest Quality Standards | AAR LUXE CAR
-              CARE
-            </title>
             <meta
               name="twitter:title"
               content="Protect Your Car with the Highest Quality Standards"
@@ -139,6 +133,21 @@ export default async function LocaleLayout({
           content="rZplCzD4MObzqAdvNbc1T1wm6QeQ7lLkVkYE403Amhc"
         />
         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "http://schema.org",
+              "@type": "WebSite",
+              url: "https://www.aarluxe.online",
+              name: "AarLuxe Car Care",
+              description:
+                locale === "ar"
+                  ? "aar-aarluxe احمي سيارتك بأعلى معايير الجودة مع خدماتنا الفاخرة. نقدم تلميع وتغطية سيارات بضمان حتى 7 سنوات. اكتشف أفضل خدمات العناية بالسيارات في."
+                  : "Protect your car with our luxurious services, including high-quality car polishing, advanced car coverage, and comprehensive protection against damage and scratches. We offer specialized services in polishing and covering luxury cars with a long-term guarantee of up to 7 years, ensuring that your car's appearance is preserved and protected from external factors. Additionally, we use advanced techniques to ensure effective protection and amazing results, keeping your car looking like new. Experience the exceptional care we provide with the best car maintenance and protection services to meet all your needs.",
+            }),
+          }}
+        />
+        <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){
                         w[l]=w[l]||[];
@@ -152,7 +161,7 @@ export default async function LocaleLayout({
                       })(window,document,'script','dataLayer',${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS});`,
           }}
         />
-      </Head>
+      </head>
       <body
         className={`${ibmPlexSansArabic.variable} ${
           chakraPetch.variable

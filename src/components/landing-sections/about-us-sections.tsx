@@ -154,14 +154,14 @@ const AboutUsSection = async ({ locale }: { locale: string }) => {
                 className={cls(
                   "flag absolute -z-10",
                   locale === "ar"
-                    ? "top-[-195px] left-[30px] rotate-12"
-                    : "top-[-155px] right-[25%] rotate-0"
+                    ? "top-[-115px] left-[10px] rotate-12"
+                    : "top-[-120px] right-[25%] rotate-0"
                 )}
               >
                 <Image
                   src={"/assets/images/about-us/saudi-flag.png"}
-                  width={250}
-                  height={250}
+                  width={200}
+                  height={200}
                   alt={t("description")}
                 />
               </div>

@@ -8,7 +8,7 @@ const Smoke = () => {
 
   // Create particle geometry, material, and texture using useMemo
   const particles = useMemo(() => {
-    const count = 200 ; // Number of particles
+    const count = 600 ; // Number of particles
 
     // Create geometry
     const geometry = new THREE.BufferGeometry();
@@ -39,7 +39,7 @@ const Smoke = () => {
 
     // Create material with texture
     const material = new THREE.PointsMaterial({
-      size: 400,
+      size: 500,
       map: texture, // Use the smoke texture
       transparent: true,
       opacity: 0.1 , // Lower opacity for a softer look
