@@ -8,7 +8,7 @@ const HeroSection = async ({ locale }: { locale: string }) => {
   const t = await getTranslations("components.HeroSection");
   return (
     <section
-      className="bg-[image:var(--hero-bg)] bg-no-repeat h-screen w-full bg-cover min-h-screen relative overflow-x-hidden"
+      className="bg-[image:var(--hero-bg)] bg-no-repeat h-screen w-full bg-cover bg-fixed min-h-screen relative overflow-x-hidden"
       id="hero-section"
     >
       <div className="smoke-effect absolute top-0 left-0 w-full h-full z-0">
